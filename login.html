@@ -3,12 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Georama:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
   </head>
-  <body></body>
+  <body>
+    <div class="background-container_welcome">
+      <div class="background-image-1_welcome">
+        <header>
+          <div class="logo-welcome">
+            <img src="./IMAGES/mahindra-rise.png" alt="logo" />
+          </div>
+        </header>
+       
+        <div class="top-login">Welcome</div>
+        <div class="middle-login">Mahindra Dealer World!</div>
+        <div class="login-container">
+          <form>
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" placeholder="Your Username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" placeholder="Your Password">
+              <span class="hide-password">
+                <i class="fas fa-eye"></i>
+              </span>
+            </div>
+            <div class="form-group">
+              <input type="checkbox" id="remember-password" name="remember-password">
+              <label for="remember-password">Remember Password</label>
+            </div>
+            <div class="captcha-container">
+              <button type="button" class="captcha-refresh">
+                <i class="fas fa-sync-alt"></i>
+              </button>
+              <input type="text" class="captcha-input" placeholder="Enter CAPTCHA">
+            </div>
+            <button type="submit">Login</button>
+            <div class="register-link">
+              Don't have an account? <a href="#">Register Now</a>
+            </div>
+          </form>
+        </div>
+      </div>
+ 
+      
+      <div class="background-image-2_welcome">
+        <div class="trending"><h2>Trending @ Mahindra</h2></div>
+        <div class="xuv-3xo">
+          <img
+            src="./IMAGES/XUV-3XO.png"
+            alt="XUV-3XO"
+            
+          />
+        </div>
+    </div>
+      </div>
+    </div>
+
+
+  </body>
 </html>
