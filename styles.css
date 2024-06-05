@@ -54,7 +54,7 @@ h2 {
 }
 
 .custom-span svg {
-  animation: scaling 2s ease-out infinite;
+  animation: scaling 3s ease-out infinite;
 }
 
 @keyframes scaling {
