@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  height: calc(100vh - 136px);
+  height: calc(100vh - 96px);
 }
 
 .logo svg {
@@ -44,7 +44,7 @@ h2 {
 .bottom {
   font-family: "Lato", sans-serif;
   position: absolute;
-  bottom: 40px;
+  bottom: 0px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
