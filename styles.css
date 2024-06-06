@@ -23,6 +23,7 @@
   justify-content: center;
   align-items: center;
   color: white;
+  height: 158px;
 }
 
 .logo svg {
@@ -54,7 +55,7 @@ h2 {
 }
 
 .custom-span svg {
-  animation: scaling 3.1s ease-out infinite;
+  animation: scaling 3.2s ease-out infinite;
 }
 
 @keyframes scaling {
