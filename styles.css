@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Georama+SemiExpanded:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lustra+Text+Medium");
 
 * {
   margin: 0;
@@ -531,4 +532,403 @@ button[type="submit"]:hover {
   justify-content: center;
   margin: 50px 0;
   font-family: "Georama", sans-serif;
+}
+
+/* ------------------------------------------------------------------- Traanscation -------------------------------------------------------------------  */
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  width: 1366px;
+  padding: 16px 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+header img {
+  width: 163px;
+  height: 37px;
+}
+
+.head-container {
+}
+.head-container-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 41px;
+}
+.head-container-right nav {
+  display: flex;
+  align-items: flex-start;
+  gap: 53px;
+}
+.head-container-right a {
+  color: var(--lightmode-primary-black, #0b0b0c);
+
+  /* h6/16_bold */
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  text-decoration: none;
+}
+.head-container h2 {
+  color: #0b0b0c;
+  font-family: "FONTSPRING DEMO - Lustra Medium";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 122.222% */
+}
+
+
+.head-container {
+  display: flex;
+  padding: 16px 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+}
+
+.head-container-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 41px;
+}
+.head-container-left img {
+  width: 163px;
+  height: 37px;
+}
+
+.transaction-head-text h2 {
+  color: #1c1c1c;
+  font-family: "FONTSPRING DEMO - Lustra Medium", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 122.222% */
+}
+
+.transaction-head-text p {
+  color: var(--lightmode-primary-red, #ff3e5b);
+  /* b4/14_regular */
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px; /* 164.286% */
+}
+
+.head-container-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 53px;
+}
+.head-container-right a {
+  color: var(--lightmode-primary-black, #0b0b0c);
+
+  /* h6/16_bold */
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+}
+
+.head-container-left svg {
+  width: 1px;
+  height: 53px;
+  background: #e6e6e6;
+}
+
+.sub-container {
+  display: flex;
+  height: 50px;
+  padding: 16px 40px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  background: rgba(251, 209, 208, 0.25);
+}
+
+.sub-container-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sub-container-left h4 {
+  color: #545454;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px; /* 164.286% */
+  text-transform: capitalize;
+}
+.sub-container-left svg {
+  width: 1px;
+  height: 26px;
+  background: #b5b5b6;
+}
+
+.sub-container-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.sub-container-right h4 {
+  color: #ff3e5b;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px; /* 164.286% */
+  text-transform: capitalize;
+}
+
+.slider {
+  display: flex;
+  height: 44px;
+  padding: 12px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--lightmode-neutral-grey1, #e6e6e6);
+  background: var(--lightmode-primary-white, #fff);
+  overflow: hidden; /* Add this to hide the slider content */
+}
+
+.slider ul {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+}
+
+.slider li {
+  flex: 0 0 100%; /* Make each slide take up the full width */
+  transition: transform 0.5s ease-in-out; /* Add transition effect */
+}
+
+.slider li h4 {
+  color: var(--Colors-Secondary-Grey-1, #342c2c);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+/* Add animation to move the slider */
+.slider ul {
+  animation: slider 10s linear infinite;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1045px;
+  height: 24px;
+  padding: 12px 40px 7px 40px;
+}
+.left-home {
+  color: var(--lightmode-primary-black, #0b0b0c);
+
+  /* h6/16_bold */
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+}
+.right-home {
+  color: var(--lightmode-primary-red, #ff3e5b);
+  text-align: center;
+
+  /* CTA/14_bold */
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px; /* 164.286% */
+  text-transform: capitalize;
+}
+
+.table-container {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 1px solid var(--lightmode-neutral-grey1, #e6e6e6);
+}
+.scroll-table{
+  
+}
+
+thead {
+  height: 40px;
+  align-self: stretch;
+  opacity: 0.8;
+  background: #4d515e;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15);
+}
+thead tr th {
+  color: var(--lightmode-primary-white, #fff);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+tbody tr {
+  height: 40px;
+  align-self: stretch;
+  background: var(--lightmode-primary-white, #fff);
+}
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+  height: 40px;
+  color: var(--lightmode-neutral-grey4, #545454);
+  padding: 0 40px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+}
+.button {
+  color: var(--lightmode-primary-red, #ff3e5b);
+  text-align: center;
+
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: none;
+}
+
+.Contact-us {
+  padding: 0 40px;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.Contact-us h2 {
+  color: var(--lightmode-primary-black, #0b0b0c);
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.Contact-us-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.Contact-us-sub-para p {
+  margin-left: 10px;
+}
+.Contact-us p {
+  color: var(--lightmode-primary-black, #0b0b0c);
+
+  /* b5/12_regular */
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+}
+
+.Contact-us a {
+  color: blue;
+  text-decoration: none;
+}
+
+.Contact-us a:hover {
+  text-decoration: underline;
+}
+
+.Contact-us-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* ----------------------------------------------footer-------------------------------------------------- */
+
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  height: 36px;
+  padding: 8px 40px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  height: 36px;
+  flex-shrink: 0;
+  border: 1px solid var(--lightmode-neutral-grey1, #e6e6e6);
+  background: var(--lightmode-neutral-grey0, #f2f2f2);
+  box-shadow: 4px 0px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.note {
+  color: var(--darkmode-neutral-grey1, #232324);
+
+  /* b4/14_regular */
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px; /* 164.286% */
+}
+
+.version {
+  color: var(--lightmode-neutral-grey4, #545454);
+
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px; /* 164.286% */
 }

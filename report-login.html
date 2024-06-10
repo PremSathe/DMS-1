@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Report Login</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -42,7 +42,7 @@
             <h4>Welcome to</h4>
             <h3>Mahindra Dealer World!</h3>
           </div>
-          <div class="login-container">
+          <div class="login-container" style="height: 360px">
             <form id="login-form">
               <div class="form-group">
                 <label for="username">Username</label>
@@ -71,12 +71,11 @@
                       fill-opacity="0.8"
                     />
                   </svg>
-
                   <h4>Hide</h4>
                 </div>
               </div>
               <input type="password" id="password" name="password" required />
-              <div class="form-group-3">
+              <div class="form-group-3" style="margin-bottom: 20px">
                 <input
                   type="checkbox"
                   id="remember-password"
@@ -84,41 +83,7 @@
                 />
                 <label for="remember-password"> Remember Password </label>
               </div>
-              <div class="captcha-container">
-                <button type="button" class="captcha-span">pprKji</button>
-                <button type="button" class="captcha-refresh">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
-                  >
-                    <g clip-path="url(#clip0_78_339)">
-                      <path
-                        d="M10 3.5V5.5C9.00981 5.49823 8.04138 5.79051 7.21749 6.3398C6.3936 6.88908 5.75135 7.67063 5.37218 8.58537C4.993 9.5001 4.89397 10.5068 5.08764 11.4779C5.28131 12.449 5.75895 13.3407 6.46002 14.04L5.05002 15.45C4.07095 14.471 3.40418 13.2237 3.13405 11.8658C2.86391 10.5078 3.00253 9.10029 3.53239 7.82115C4.06224 6.542 4.95953 5.44872 6.11076 4.67955C7.262 3.91039 8.61548 3.4999 10 3.5ZM14.95 5.55C15.9291 6.52897 16.5959 7.7763 16.866 9.13423C17.1361 10.4922 16.9975 11.8997 16.4677 13.1789C15.9378 14.458 15.0405 15.5513 13.8893 16.3204C12.738 17.0896 11.3846 17.5001 10 17.5V15.5C10.9902 15.5018 11.9587 15.2095 12.7826 14.6602C13.6064 14.1109 14.2487 13.3294 14.6279 12.4146C15.007 11.4999 15.1061 10.4932 14.9124 9.52209C14.7187 8.55101 14.2411 7.6593 13.54 6.96L14.95 5.55ZM10 20.5L6.00002 16.5L10 12.5V20.5ZM10 8.5V0.5L14 4.5L10 8.5Z"
-                        fill="black"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_78_339">
-                        <rect
-                          width="20"
-                          height="20"
-                          fill="white"
-                          transform="translate(0 0.5)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-                <input
-                  type="text"
-                  class="captcha-input"
-                  placeholder="Enter CAPTCHA"
-                  required
-                />
-              </div>
+
               <button type="submit">Login</button>
               <div class="register-link">
                 Don't have an account?
@@ -174,46 +139,6 @@
       </svg>`;
           }
         });
-
-      document
-        .getElementById("login-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const username = document.getElementById("username").value;
-          const password = document.getElementById("password").value;
-          const captcha = document.querySelector(".captcha-input").value;
-
-          // Add your login logic here. For now, just an alert.
-          if (captcha === "pprKji") {
-            // Example captcha check
-            alert(
-              `Logging in with Username: ${username} and Password: ${password}`
-            );
-          } else {
-            alert("Captcha is incorrect. Please try again.");
-          }
-        });
-      document
-        .querySelector(".captcha-refresh")
-        .addEventListener("click", function () {
-          const captchaButton = document.querySelector(".captcha-span");
-          // Generate a new CAPTCHA here. For demonstration, let's generate a random 6-character CAPTCHA.
-          const newCaptcha = generateCaptcha(6); // Replace with your actual CAPTCHA generation logic
-          captchaButton.innerText = newCaptcha;
-        });
-
-      // Function to generate a random string of given length
-      function generateCaptcha(length) {
-        const characters =
-          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        let captcha = "";
-        for (let i = 0; i < length; i++) {
-          captcha += characters.charAt(
-            Math.floor(Math.random() * characters.length)
-          );
-        }
-        return captcha;
-      }
     </script>
   </body>
 </html>
