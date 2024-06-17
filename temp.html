@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Dropdown Menus</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        background-color: #6c6e79;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: #57585e;
+      }
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+      .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #6c6e79;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid #999;
+      }
+      .dropdown-content a:hover {
+        background-color: #57585e;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .highlight {
+        background-color: #ff4f61;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">Menu 1</button>
+        <div class="dropdown-content">
+          <a href="#" class="highlight">Invoice Generation</a>
+          <a href="#">Co-dealer Invoice</a>
+          <a href="#">Invoice Cancellation</a>
+          <a href="#">Reports</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Menu 2</button>
+        <div class="dropdown-content">
+          <a href="#">Order Taking Form (OTF)</a>
+          <a href="#">Charger Installation Process</a>
+          <a href="#">Vehicle Allotment</a>
+          <a href="#" class="highlight">Vehicle Invoice</a>
+          <a href="#">Vehicle Delivery</a>
+          <a href="#">(D-7) Process</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

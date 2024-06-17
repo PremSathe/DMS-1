@@ -84,7 +84,7 @@
                 <label for="remember-password"> Remember Password </label>
               </div>
 
-              <button type="submit">Login</button>
+              <button type="submit" id="loginButtonreport">Login</button>
               <div class="register-link">
                 Don't have an account?
                 <a href="./register.html">Register Now</a>
@@ -96,7 +96,14 @@
 
       <div class="background-image-2_welcome">
         <div class="trending">
-          <h2>Trending @ Mahindra</h2>
+          <h2>
+            Trending @
+            <img
+              src="./IMAGES/mahindra.svg"
+              alt="mahindra"
+              style="margin-left: 12px"
+            />
+          </h2>
           <div id="image">
             <img src="./IMAGES/xuv-3x0.png" alt="XUV-3XO" />
           </div>
@@ -138,6 +145,13 @@
          />
       </svg>`;
           }
+        });
+
+      document
+        .getElementById("loginButtonreport")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "reports.html";
         });
     </script>
   </body>
