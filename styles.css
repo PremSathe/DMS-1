@@ -706,7 +706,9 @@ nav a.active {
   line-height: 23px;
   text-transform: capitalize;
 }
-
+.sub-container-left h4 span {
+  color: #858585;
+}
 .sub-container-left svg {
   width: 1px;
   height: 26px;
@@ -720,6 +722,7 @@ nav a.active {
 }
 
 .sub-container-right h4 {
+  cursor: pointer;
   color: #ff3e5b;
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -753,12 +756,13 @@ nav a.active {
 .slider li {
   flex: 0 0 100%;
   transition: transform 0.5s ease-in-out;
+  font-family: "Lato", sans-serif;
 }
 
 .slider li h4 {
   color: var(--Colors-Secondary-Grey-1, #342c2c);
   font-family: "Lato", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -778,7 +782,7 @@ nav a.active {
   }
 }
 .navbar {
-  background-color: #6c6e79;
+  background-color: #71747e;
   height: 20px;
   white-space: nowrap;
   padding: 8px 16px;
@@ -811,6 +815,11 @@ nav a.active {
   background-color: inherit;
   font-family: "Lato", sans-serif;
   margin: 0;
+  cursor: pointer;
+}
+
+.dropdown .dropbtn img {
+  margin: end;
 }
 .dropdown-content {
   background-color: #71747e;
@@ -853,7 +862,7 @@ nav a.active {
 }
 
 .dropdown-content a:hover .dropdown-submenu {
-  /* display: block; */
+  display: block;
 }
 .dropdown-submenu {
   display: none;
