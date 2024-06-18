@@ -88,7 +88,7 @@
         </div>
       </div>
 
-      <div class="navbar">
+      <!-- <div class="navbar">
         <div class="dropdown">
           <button class="dropbtn" onclick="showDropdown(this)">
             Pre-Sales
@@ -226,6 +226,183 @@
         </div>
         <div class="dropdown">
           <button class="dropbtn">
+            Team Mahindra
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
+            Pre-Sales
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
+            Sales
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#" class="has-submenu">
+              Order Taking Form (OTF)
+              <img src="./IMAGES/right-arrow.svg" alt="right-arrow" />
+            </a>
+            <a href="#">Vehicle Allotment</a>
+            <a href="#" class="has-submenu">
+              Vehicle Invoice
+              <img src="./IMAGES/right-arrow.svg" alt="right-arrow" />
+              <div class="dropdown-submenu">
+                <a href="#">Invoice Generation</a>
+                <a href="#">Co-dealer Invoice</a>
+                <a href="#">Invoice Cancellation</a>
+                <a href="#">Reports</a>
+              </div>
+            </a>
+            <a href="#" class="has-submenu">
+              Charger Installation Process
+              <img src="./IMAGES/right-arrow.svg" alt="right-arrow" />
+            </a>
+            <a href="#" class="has-submenu">
+              Vehicle Delivery
+              <img src="./IMAGES/right-arrow.svg" alt="right-arrow" />
+            </a>
+            <a href="#" class="has-submenu">
+              (D-7) Process
+              <img src="./IMAGES/right-arrow.svg" alt="right-arrow" />
+            </a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
+            Parts
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
+            Service
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
+            CRM
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
+            Finance
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
+            Common
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
+            Admin
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
+            Claim Arbitration
+            <img
+              src="./IMAGES/d-arrow.svg"
+              alt="list"
+              style="margin-bottom: -4px"
+            />
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="showDropdown(this)">
             Team Mahindra
             <img
               src="./IMAGES/d-arrow.svg"
@@ -536,27 +713,39 @@
     </div>
 
     <script>
-      function toggleDropdown() {
-        document.getElementById("myDropdown").classList.toggle("show");
+      function showDropdown(button) {
+        const dropdownContent = button.nextElementSibling;
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
       }
 
       window.onclick = function (event) {
-        if (!event.target.matches(".transaction-head-text img")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
+        if (!event.target.matches(".dropbtn")) {
+          const dropdowns = document.getElementsByClassName("dropdown-content");
+          for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+              openDropdown.style.display = "none";
             }
           }
         }
       };
 
-      function showDropdown(element) {
-        console.log("element", element);
-        var dropdownContent = element.nextElementSibling;
-        dropdownContent.style.display = "block";
-      }
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements with class 'has-submenu'
+        const submenuItems = document.querySelectorAll(".has-submenu");
+
+        submenuItems.forEach((item) => {
+          item.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            // Toggle the visibility of the next sibling element (the submenu)
+            const submenu = this.querySelector(".dropdown-submenu");
+            if (submenu) {
+              submenu.classList.toggle("show");
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>

@@ -105,7 +105,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
+          <button class="dropbtn" onclick="showDropdown(this)">
             Sales
             <img
               src="./IMAGES/d-arrow.svg"
@@ -114,13 +114,29 @@
             />
           </button>
           <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="#" class="has-submenu">
+              Employee Empowerment Request Report (AO)
+            </a>
+            <a href="#"
+              >Order Taking Form OTF
+              <img src="./IMAGES/right-arrow.svg" alt="right-arrow" />
+            </a>
+            <a href="#" class="has-submenu">
+              Transfer RC Detials
+              <img src="./IMAGES/right-arrow.svg" alt="right-arrow" />
+              <div class="dropdown-submenu">
+                <a href="#">Transfer RC copy details excel report (MnM)</a>
+                <a href="#">Transfer RC copy details excel report (Dealer)</a>
+              </div>
+            </a>
+            <a href="#" class="has-submenu">
+              New PreSales Claim
+              <img src="./IMAGES/right-arrow.svg" alt="right-arrow" />
+            </a>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
+          <button class="dropbtn" onclick="showDropdown(this)">
             Parts
             <img
               src="./IMAGES/d-arrow.svg"
@@ -135,7 +151,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
+          <button class="dropbtn" onclick="showDropdown(this)">
             Service
             <img
               src="./IMAGES/d-arrow.svg"
@@ -150,7 +166,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
+          <button class="dropbtn" onclick="showDropdown(this)">
             CRM
             <img
               src="./IMAGES/d-arrow.svg"
@@ -165,7 +181,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
+          <button class="dropbtn" onclick="showDropdown(this)">
             Finance
             <img
               src="./IMAGES/d-arrow.svg"
@@ -180,7 +196,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
+          <button class="dropbtn" onclick="showDropdown(this)">
             Common
             <img
               src="./IMAGES/d-arrow.svg"
@@ -195,7 +211,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
+          <button class="dropbtn" onclick="showDropdown(this)">
             Admin
             <img
               src="./IMAGES/d-arrow.svg"
@@ -210,7 +226,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
+          <button class="dropbtn" onclick="showDropdown(this)">
             Claim Arbitration
             <img
               src="./IMAGES/d-arrow.svg"
@@ -225,7 +241,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
+          <button class="dropbtn" onclick="showDropdown(this)">
             Team Mahindra
             <img
               src="./IMAGES/d-arrow.svg"
@@ -536,27 +552,39 @@
     </div>
 
     <script>
-      function toggleDropdown() {
-        document.getElementById("myDropdown").classList.toggle("show");
+      function showDropdown(button) {
+        const dropdownContent = button.nextElementSibling;
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
       }
 
       window.onclick = function (event) {
-        if (!event.target.matches(".transaction-head-text img")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
+        if (!event.target.matches(".dropbtn")) {
+          const dropdowns = document.getElementsByClassName("dropdown-content");
+          for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+              openDropdown.style.display = "none";
             }
           }
         }
       };
 
-      function showDropdown(element) {
-        console.log("element", element);
-        var dropdownContent = element.nextElementSibling;
-        dropdownContent.style.display = "block";
-      }
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all elements with class 'has-submenu'
+        const submenuItems = document.querySelectorAll(".has-submenu");
+
+        submenuItems.forEach((item) => {
+          item.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            // Toggle the visibility of the next sibling element (the submenu)
+            const submenu = this.querySelector(".dropdown-submenu");
+            if (submenu) {
+              submenu.classList.toggle("show");
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
