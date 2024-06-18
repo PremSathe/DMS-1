@@ -793,7 +793,7 @@ nav a.active {
 }
 .navbar a {
   float: left;
-  font-size: 14px;
+  font-size: 12px;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -835,10 +835,10 @@ nav a.active {
   border-bottom: 1px solid white;
   float: none;
   color: white;
-  padding: 12px 16px;
+  padding: 12px 8px;
   text-decoration: none;
-  display: block;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 .dropdown-content a:hover {
   color: white;
