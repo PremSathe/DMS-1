@@ -66,7 +66,7 @@
       <div class="sub-container" style="background-color: #fef3f3">
         <div class="sub-container-left">
           <h4>
-            <span>USER:</span>  ABHISHEK PANDHARIPANDE
+            <span>USER:</span> ABHISHEK PANDHARIPANDE
             <img class="line" src="./IMAGES/Line 78 (1).svg" alt="Line" />
           </h4>
           <h4>
@@ -552,38 +552,90 @@
     </div>
 
     <script>
-      function showDropdown(button) {
-        const dropdownContent = button.nextElementSibling;
-        dropdownContent.style.display =
-          dropdownContent.style.display === "block" ? "none" : "block";
-      }
+      // function showDropdown(button) {
+      //   const dropdownContent = button.nextElementSibling;
+      //   dropdownContent.style.display =
+      //     dropdownContent.style.display === "block" ? "none" : "block";
+      // }
 
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          const dropdowns = document.getElementsByClassName("dropdown-content");
-          for (let i = 0; i < dropdowns.length; i++) {
-            const openDropdown = dropdowns[i];
-            if (openDropdown.style.display === "block") {
-              openDropdown.style.display = "none";
-            }
-          }
-        }
-      };
+      // window.onclick = function (event) {
+      //   if (!event.target.matches(".dropbtn")) {
+      //     const dropdowns = document.getElementsByClassName("dropdown-content");
+      //     for (let i = 0; i < dropdowns.length; i++) {
+      //       const openDropdown = dropdowns[i];
+      //       if (openDropdown.style.display === "block") {
+      //         openDropdown.style.display = "none";
+      //       }
+      //     }
+      //   }
+      // };
 
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   // Get all elements with class 'has-submenu'
+      //   const submenuItems = document.querySelectorAll(".has-submenu");
+
+      //   submenuItems.forEach((item) => {
+      //     item.addEventListener("click", function (event) {
+      //       event.preventDefault(); // Prevent default anchor behavior
+      //       // Toggle the visibility of the next sibling element (the submenu)
+      //       const submenu = this.querySelector(".dropdown-submenu");
+      //       if (submenu) {
+      //         submenu.classList.toggle("show");
+      //       }
+      //     });
+      //   });
+      // });
       document.addEventListener("DOMContentLoaded", function () {
-        // Get all elements with class 'has-submenu'
+        const dropdowns = document.querySelectorAll(".dropdown");
         const submenuItems = document.querySelectorAll(".has-submenu");
 
-        submenuItems.forEach((item) => {
-          item.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent default anchor behavior
-            // Toggle the visibility of the next sibling element (the submenu)
-            const submenu = this.querySelector(".dropdown-submenu");
-            if (submenu) {
-              submenu.classList.toggle("show");
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector(".dropbtn");
+          const dropdownContent = dropdown.querySelector(".dropdown-content");
+
+          button.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent the click from bubbling up to the window
+
+            // Close all open dropdowns
+            closeAllDropdowns();
+
+            // Open the clicked dropdown
+            dropdownContent.style.display = "block";
+          });
+
+          dropdown.addEventListener("mouseover", function () {
+            // Close all open dropdowns
+            closeAllDropdowns();
+
+            // Open the hovered dropdown
+            dropdownContent.style.display = "block";
+          });
+
+          dropdown.addEventListener("mouseout", function (event) {
+            // Check if the mouse is outside the dropdown
+            if (!dropdown.contains(event.relatedTarget)) {
+              dropdownContent.style.display = "none";
             }
           });
         });
+
+        window.addEventListener("click", function () {
+          closeAllDropdowns();
+        });
+
+        function closeAllDropdowns() {
+          const dropdowns = document.querySelectorAll(".dropdown-content");
+          dropdowns.forEach((dropdown) => {
+            dropdown.style.display = "none";
+          });
+        }
+
+        function closeAllSubmenus() {
+          const submenus = document.querySelectorAll(".dropdown-submenu");
+          submenus.forEach((submenu) => {
+            submenu.classList.remove("show");
+          });
+        }
       });
     </script>
   </body>

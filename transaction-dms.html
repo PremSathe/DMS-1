@@ -120,8 +120,11 @@
             </a>
             <a href="#">Vehicle Allotment</a>
             <a href="#" class="has-submenu">
+              <!-- <button class="dropbtn" onclick="showDropdown(this)"> -->
+
               Vehicle Invoice
               <img src="./IMAGES/right-arrow.svg" alt="right-arrow" />
+              <!-- </button> -->
               <div class="dropdown-submenu">
                 <a href="#">Invoice Generation</a>
                 <a href="#">Co-dealer Invoice</a>
@@ -560,38 +563,57 @@
     </div>
 
     <script>
-      function showDropdown(button) {
-        const dropdownContent = button.nextElementSibling;
-        dropdownContent.style.display =
-          dropdownContent.style.display === "block" ? "none" : "block";
-      }
-
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          const dropdowns = document.getElementsByClassName("dropdown-content");
-          for (let i = 0; i < dropdowns.length; i++) {
-            const openDropdown = dropdowns[i];
-            if (openDropdown.style.display === "block") {
-              openDropdown.style.display = "none";
-            }
-          }
-        }
-      };
-
       document.addEventListener("DOMContentLoaded", function () {
-        // Get all elements with class 'has-submenu'
+        const dropdowns = document.querySelectorAll(".dropdown");
         const submenuItems = document.querySelectorAll(".has-submenu");
 
-        submenuItems.forEach((item) => {
-          item.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent default anchor behavior
-            // Toggle the visibility of the next sibling element (the submenu)
-            const submenu = this.querySelector(".dropdown-submenu");
-            if (submenu) {
-              submenu.classList.toggle("show");
+        dropdowns.forEach((dropdown) => {
+          const button = dropdown.querySelector(".dropbtn");
+          const dropdownContent = dropdown.querySelector(".dropdown-content");
+
+          button.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent the click from bubbling up to the window
+
+            // Close all open dropdowns
+            closeAllDropdowns();
+
+            // Open the clicked dropdown
+            dropdownContent.style.display = "block";
+          });
+
+          dropdown.addEventListener("mouseover", function () {
+            // Close all open dropdowns
+            closeAllDropdowns();
+
+            // Open the hovered dropdown
+            dropdownContent.style.display = "block";
+          });
+
+          dropdown.addEventListener("mouseout", function (event) {
+            // Check if the mouse is outside the dropdown
+            if (!dropdown.contains(event.relatedTarget)) {
+              dropdownContent.style.display = "none";
             }
           });
         });
+
+        window.addEventListener("click", function () {
+          closeAllDropdowns();
+        });
+
+        function closeAllDropdowns() {
+          const dropdowns = document.querySelectorAll(".dropdown-content");
+          dropdowns.forEach((dropdown) => {
+            dropdown.style.display = "none";
+          });
+        }
+
+        function closeAllSubmenus() {
+          const submenus = document.querySelectorAll(".dropdown-submenu");
+          submenus.forEach((submenu) => {
+            submenu.classList.remove("show");
+          });
+        }
       });
     </script>
   </body>

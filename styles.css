@@ -849,7 +849,7 @@ nav a.active {
   transition: transform 0s;
 }
 .dropdown-submenu {
-  /* display: none; */
+  display: none;
   font-family: "Lato", sans-serif;
   background-color: #71747e;
   position: absolute;
@@ -863,10 +863,6 @@ nav a.active {
 
 .dropdown-content a:hover .dropdown-submenu {
   display: block;
-}
-.dropdown-submenu {
-  display: none;
-  margin-left: 20px;
 }
 
 .home {
