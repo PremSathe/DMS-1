@@ -818,7 +818,7 @@ nav a.active {
 
 .menu-bar ul li a {
   font-family: "Lato", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-white);
   text-decoration: none;
   display: flex;
@@ -837,6 +837,14 @@ nav a.active {
 /* dropdown menu style */
 .dropdown-menu {
   display: none;
+}
+
+.dropdown-menu ul li {
+  padding: 0 12px;
+}
+
+.dropdown-menu ul li a {
+  font-size: 12px;
 }
 
 .menu-bar ul li:hover .dropdown-menu {
@@ -990,6 +998,14 @@ nav a.active {
 
 .menu-bar-report ul li .dropdown-menu-1-report ul li {
   border-bottom: 1px solid var(--color-white); /* White border on bottom */
+}
+
+.dropdown-menu-report ul li {
+  padding: 0 12px;
+}
+
+.dropdown-menu-report ul li a {
+  font-size: 12px;
 }
 
 /* ------------------------------------------------------------------------------------------------------- */
