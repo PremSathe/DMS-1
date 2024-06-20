@@ -900,7 +900,8 @@ nav a.active {
 /* -------------------------------------reports-menu------------------------------------------------------ */
 
 .menu-bar-report {
-  background-color: var(--color-black);
+  /* background-color: var(--color-black); */
+  background-color: #ff3e5b;
   height: 36px;
   width: 100%;
   display: flex;
