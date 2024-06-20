@@ -818,7 +818,7 @@ nav a.active {
 
 .menu-bar ul li a {
   font-family: "Lato", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--color-white);
   text-decoration: none;
   display: flex;
@@ -865,6 +865,9 @@ nav a.active {
   width: 154px;
   /* padding: 10px; */
 }
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 154px;
+}
 
 .dropdown-menu-1 {
   display: none;
@@ -886,12 +889,110 @@ nav a.active {
   border-bottom: 1px solid var(--color-white); /* White border on bottom */
 }
 
-/* .dropdown-menu-1:hover {
-top: 0;
-} */
+/* -------------------------------------reports-menu------------------------------------------------------ */
 
-/* ------------------------------------------------------------------------------------------- */
+.menu-bar-report {
+  background-color: var(--color-black);
+  height: 36px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  position: relative;
+}
 
+.menu-bar-report ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar-report ul li {
+  /* width: 120px; */
+  /* padding: 9px 30px; */
+  height: 35px;
+  width: auto;
+  padding: 0px 25px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: s;
+  align-items: center;
+  position: relative;
+}
+
+.menu-bar-report ul li a {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: var(--color-white);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s;
+  gap: 4px;
+  width: 100%;
+}
+
+.menu-bar-report ul li:hover,
+.menu-bar-report ul li a:hover {
+  color: white;
+  background-color: #ff3e5b;
+}
+
+/* dropdown menu style */
+.dropdown-menu-report {
+  display: none;
+}
+
+.menu-bar-report ul li:hover .dropdown-menu-report {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-black);
+  border-top: 1px solid var(--color-white); /* White border on top */
+  border-bottom: 1px solid var(--color-white); /* White border on bottom */
+}
+
+.menu-bar-report ul li:hover .dropdown-menu-report ul {
+  display: block;
+  /* margin: 10px; */
+}
+
+.menu-bar-report ul li:hover .dropdown-menu-report ul .sub-menu-report {
+  position: absolute;
+  top: -13px;
+  background: #71747e;
+  z-index: 10;
+}
+
+.menu-bar-report ul li:hover .dropdown-menu-report ul li {
+  width: 154px;
+  /* padding: 10px; */
+}
+.menu-bar-report ul li:hover .dropdown-menu-report ul li {
+  width: 254px;
+}
+
+.dropdown-menu-1-report {
+  display: none;
+}
+
+.dropdown-menu-report ul li:hover .dropdown-menu-1-report {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 5;
+  background-color: var(--color-black);
+}
+
+.menu-bar-report ul li .dropdown-menu-report ul li {
+  border-bottom: 1px solid var(--color-white); /* White border on bottom */
+}
+
+.menu-bar-report ul li .dropdown-menu-1-report ul li {
+  border-bottom: 1px solid var(--color-white); /* White border on bottom */
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
 .home {
   display: flex;
   justify-content: space-between;
